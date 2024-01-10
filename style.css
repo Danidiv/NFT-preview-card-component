@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  /*  Colors */
+  /*  Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --Very-dark-blue1: hsl(217, 54%, 11%); /*Main BG */
+  --Very-dark-blue2: hsl(216, 50%, 16%); /*Card BG */
+  --Very-dark-blue3: hsl(215, 32%, 27%); /*Line */
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Very-dark-blue1);
+}
+
+.card {
+  background-color: var(--Very-dark-blue2);
+  border-radius: 15px;
+  width: 275px;
+  padding: 1rem;
+}
+.card-img {
+  position: relative;
+}
+.card-img .view {
+  position: absolute;
+  top: 0;
+  background-color: hsl(178, 100%, 50%, 50%);
+  width: 100%;
+  height: 93%;
+  z-index: 999;
+  border-radius: 10px;
+  opacity: 0;
+}
+.card-img .view img {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-img div:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+.card h3 {
+  color: var(--White);
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.description {
+  color: var(--Soft-blue);
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-weight: 300;
+}
+.price-day {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(215, 51%, 70%);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  color: var(--Cyan);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.price img {
+  margin-right: 5px;
+}
+.day {
+  display: flex;
+  align-items: center;
+  color: var(--Soft-blue);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.day img {
+  margin-right: 5px;
+}
+.avatar-info {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: var(--Soft-blue);
+}
+.avatar {
+  border: 1px solid white;
+  border-radius: 5rem;
+  margin-right: 1rem;
+  width: 30px;
+}
+span {
+  color: var(--White);
+}
+.card-img img,
+h3,
+span {
+  cursor: pointer;
+}
+h3:hover,
+span:hover {
+  color: var(--Cyan);
+}
